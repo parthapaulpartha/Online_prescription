@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+{% load staticfiles %}
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="container" >
+        <div style="margin-top:44px"></div>
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit"> Submit </button>
+        </form>
+<!--        <form method="post" action="/prescription/create_prescription/">-->
+<!--          {% csrf_token %}-->
+<!--          <div class="form-group row ">-->
+<!--            <div class="col-3"></div>-->
+<!--            <div class="col-6">-->
+<!--              <input class="form-control " name="hospital_name" type="text" placeholder="Hospital Name">-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="row">-->
+<!--            <div class="form-group col">-->
+<!--              <label for="">Doctor type</label>-->
+<!--              <select class="form-control" name="doctor_type" id="">-->
+<!--                <option>Audiologist</option>-->
+<!--                <option>Allergist</option>-->
+<!--                <option>Anesthesiologist</option>-->
+<!--                <option>Cardiologist</option>-->
+<!--                <option>Dermatologist</option>-->
+<!--                <option>Endocrinologist</option>-->
+<!--                <option>Epidemiologist</option>-->
+<!--                <option>Gynecologist</option>-->
+<!--                <option>Immunologist</option>-->
+<!--                <option>Infectious Disease Specialist</option>-->
+<!--                <option>Medical Geneticist</option>-->
+<!--                <option>Science fiction</option>-->
+<!--                <option>Microbiologist</option>-->
+<!--                <option>Neonatologist</option>-->
+<!--                <option>Neurologist</option>-->
+<!--                <option>Neurosurgeon</option>-->
+<!--                <option>Obstetrician</option>-->
+<!--                <option>Oncologist</option>-->
+<!--                <option>Orthopedic Surgeon</option>-->
+<!--                <option>ENT Specialist</option>-->
+<!--                <option>Pediatrician</option>-->
+<!--                <option>Physiologist</option>-->
+<!--                <option>Plastic Surgeon</option>-->
+<!--                <option>Podiatrist</option>-->
+<!--                <option>Psychiatrist</option>-->
+<!--                <option>Radiologist</option>-->
+<!--                <option>Rheumatologist</option>-->
+<!--                <option>Surgeon</option>-->
+<!--                <option>Urologist</option>-->
+<!--              </select>-->
+<!--            </div>-->
+<!--            <div class="form-group col">-->
+<!--              <label>Doctor phone</label>-->
+<!--              <input class="form-control "  name="doctor_phone" type="text" placeholder="01*********">-->
+<!--            </div>-->
+<!--            <div class="form-group col">-->
+<!--              <label for="exampleFormControlInput1">Email address</label>-->
+<!--              <input type="email" name="doctor_email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="form-group row">-->
+<!--            <div class="col-3"></div>-->
+<!--            <div class="col-6">-->
+<!--              <textarea class="form-control" name="doctor_designation" id="exampleFormControlTextarea1" placeholder="Doctor designation" rows="3"></textarea>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <hr>-->
+
+<!--          <div class="row">-->
+<!--            <div class="form-group col">-->
+<!--              <label>Patient name</label>-->
+<!--              <input class="form-control " name="patient_name" type="text" placeholder="">-->
+<!--            </div>-->
+<!--            <div class="form-group col">-->
+<!--              <label>Age</label>-->
+<!--              <input class="form-control " name="age" type="text" placeholder="">-->
+<!--            </div>-->
+<!--            <div class="form-group col">-->
+<!--              <label for="exampleFormControlSelect2">Gender</label>-->
+<!--              <select class="form-control" name="gender" id="exampleFormControlSelect2">-->
+<!--                <option>Male</option>-->
+<!--                <option>Female</option>-->
+<!--              </select>-->
+<!--            </div>-->
+<!--            <div class="form-group col">-->
+<!--              <label>Date</label>-->
+<!--              <input class="form-control " name="date" type="date" placeholder="">-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="row">-->
+<!--            <div class="form-group col">-->
+<!--              <textarea class="form-control" name="disease" id="exampleFormControlTextarea2" placeholder="Disease" rows="3"></textarea>-->
+<!--            </div>-->
+<!--            <div class="form-group col">-->
+<!--              <textarea class="form-control" name="diagnosis" id="exampleFormControlTextarea3" placeholder="Diagnosis" rows="3"></textarea>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="row">-->
+<!--            <div class="col-1"></div>-->
+<!--            <div class="form-group col-10">-->
+<!--              <textarea class="form-control" name="treatment_planning" id="exampleFormControlTextarea4" placeholder="Treatment planning" rows="5"></textarea>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="row">-->
+<!--            <div class="form-group col">-->
+<!--              <label>Next visit date</label>-->
+<!--              <input class="form-control " name="next_visit_date" type="date" placeholder="">-->
+<!--            </div>-->
+<!--            <div class="form-group col">-->
+<!--              <label>Doctor signature</label>-->
+<!--              <input class="form-control " name="doctor_signature" type="text" placeholder="">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <button type="submit"> Submit </button>-->
+<!--        </form>-->
+    </div><br>
+
+{% endblock %}

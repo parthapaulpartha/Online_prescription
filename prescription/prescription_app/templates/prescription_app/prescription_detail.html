@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div style="margin-top:20px"></div>
+
+    <!-- Start View Movie details -->
+        <div class="">
+            {% for prescription in prescription_info %}
+
+            <center>
+                <h2> {{ prescription.hospital_name }} </h2>
+            </center><hr>
+
+            <div class="row">
+
+            <div class=" col">
+              <label><b>Doctor Name</b></label>
+              <p> {{ prescription.doctor_name }} </p>
+            </div>
+
+            <div class=" col">
+              <label><b>Doctor Type</b></label>
+              <p> {{ prescription.doctor_type }} </p>
+            </div>
+
+            <div class=" col">
+              <label><b>Doctor Phone</b></label>
+              <p> {{ prescription.doctor_phone }} </p>
+            </div>
+
+            <div class=" col">
+              <label><b> Email address </b></label>
+              <p> {{ prescription.doctor_email }} </p>
+            </div>
+
+          </div>
+
+            <div class="">
+              <center>
+                  <label><b>Doctor Designation </b></label>
+                <p> {{ prescription.doctor_designation }} </p>
+              </center>
+          </div><hr>
+
+            <div class="row">
+                <div class=" col">
+                    <label><b>Patient name</b></label>
+                    <p> {{ prescription.patient_name }} </p>
+                </div>
+
+                <div class=" col">
+                    <label><b>Age</b></label>
+                    <p> {{ prescription.age }} </p>
+                </div>
+
+                <div class=" col">
+                    <label><b>Gender</b></label>
+                    <p> {{ prescription.gender }} </p>
+                </div>
+
+                <div class="col">
+                    <label><b>Date</b></label>
+                    <p> {{ prescription.date }} </p>
+                </div>
+            </div><hr>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class=" col">
+                            <label><b>Disease</b></label>
+                            <p> {{ prescription.disease }} </p>
+                        </div><br>
+
+                        <div class=" col">
+                            <label><b>Diagnosis</b></label>
+                            <p> {{ prescription.diagnosis }} </p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <label><b>Treatment planning</b></label>
+                        <p> {{ prescription.treatment_planning }} </p>
+                    </div><hr>
+                </div>
+            </div><hr>
+
+            <div class="row">
+                <div class=" col">
+                    <label><b>Next visit date</b></label>
+                    <p> {{ prescription.next_visit_date }} </p>
+                </div>
+                <div class=" col-3">
+                    <label><b>Doctor signature</b></label>
+                    <p> {{ prescription.doctor_signature }} </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div><br>
+    <!-- End View Movie details -->
+    </div>
+
+{% endblock %}
+
